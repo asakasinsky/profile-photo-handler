@@ -1,0 +1,104 @@
+.photo-pane * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.photo-pane {
+    position: relative;
+    cursor: pointer;
+    z-index: 10000;
+    width: 100%;
+    padding: 0;
+    font: normal normal normal normal 16px/16px 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+    color: rgb(52, 73, 94);
+    border: none;
+    outline: rgb(52, 73, 94) none 0;
+    &__drop-area {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        background-color: transparent;
+        &_active {
+            opacity: 0.5;
+        }
+    }
+    &__image{
+        max-width: none !important;
+        max-height: none !important;
+    }
+    &__file-select {
+        position: absolute;
+        display: none;
+        width: 0;
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+    }
+    &__progress-bar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10100;
+        display: block;
+        width: 0;
+        height: 10px;
+        height: 2px;
+        padding: 0;
+        margin: 0;
+        color: green;
+        background-color: #009e00;
+        background-color: green;
+        opacity: 1;
+        -webkit-box-shadow: 0 1px 3px 0 #fff;
+        -moz-box-shadow: 0 1px 3px 0 #fff;
+        box-shadow: 0 1px 3px 0 #fff;
+        /* Add CSS3 styles for transition smoothing */
+
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+    &__controls {
+        display: none;
+        &_active {
+            display: block;
+        }
+    }
+    &__control {
+        display: inline-block;
+        float: left;
+        width: 50%;
+        padding: 7px 3px;
+        font-size: 12px;
+        color: gray;
+        text-align: center;
+        text-decoration: none;
+        background-color: #D8D8D8;
+        border: 1px solid #B8B8B8;
+        outline: none;
+        &:hover {
+            color: black;
+            background-color: #F0EEF1;
+        }
+    }
+    &__help-text {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10002;
+        display: block;
+        padding: .3em 1em;
+        margin: 0;
+        font-size: .8em;
+        color: white;
+        text-align: left;
+        background-color: #555e5d;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="/scripts/vendor/profile-photo-handler/Jcrop/css/jquery.Jcrop.css">
+    <link rel="stylesheet" href="/scripts/vendor/profile-photo-handler/profilePhotoHandler.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+
+    <div class="large-6 small-6 columns">
+        <div class="photo-pane" id="uploadPreview">
+            <div class="photo-pane__drop-area">
+                <img class="photo-pane__image" id="uploadPreviewImg" src="{{safeVal client.profileImage " /images/300x300.png "}}" />
+                <input type="hidden" name="profileImage" id="profileImage" class="field photo-pane__image-url" value="{{client.profileImage}}" />
+                <input type="file" id="uploadHidden" class="field photo-pane__file-select" accept="image/*" />
+                <div id="progressBar" class="photo-pane__progress-bar"></div>
+            </div>
+            <div class="photo-pane__controls photo-pane__controls-loader photo-pane__controls_active">
+                <input type="button" class="photo-pane__control" id="uploadFromDisk" value="Диск">
+                <input type="button" class="field photo-pane__control" id="uploadFromCamera" value="Камера">
+            </div>
+            <div class="photo-pane__controls photo-pane__controls-cmd">
+                <input type="button" class="photo-pane__control" id="uploadReset" value="Отменить">
+                <input type="button" class="photo-pane__control" id="uploadGo" value="Загрузить">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <!-- endbower -->
+
+    <!-- endbuild -->
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="/scripts/vendor/profile-photo-handler/Jcrop/js/jquery.Jcrop.js"></script>
+    <script src="/scripts/vendor/profile-photo-handler/profilePhotoHandler.js"></script>
+    <script src="/scripts/main.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
